@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 
 import Header from './sections/Header.jsx';
 import About from './sections/About.jsx';
+import Experience from './sections/Experience.jsx';
 
 const AppContainer = styled.div`
   -webkit-font-smoothing: antialiased;
@@ -17,6 +18,7 @@ const App = (props) => {
     <AppContainer>
       <Header />
       <About />
+      <Experience />
     </AppContainer>
   );
 };

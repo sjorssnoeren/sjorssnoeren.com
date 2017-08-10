@@ -26,3 +26,8 @@ export const Text = styled.p`
   font-size: 16px;
   line-height: 1.75;
 `;
+
+export const Link = styled.a`
+  color: #0D7BFB;
+  text-decoration: none;
+`;

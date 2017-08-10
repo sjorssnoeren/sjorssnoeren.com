@@ -26,18 +26,20 @@ const HeroText = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-bottom: 50px;
+  margin-bottom: 54px;
 `;
 
 const NavList = styled.ul`
   display: inline-block;
   float: right;
+  padding: 54px 0;
+  white-space: nowrap;
 `;
 
 const NavItem = styled.li`
   display: inline-block;
   font-size: 20px;
-  margin-left: 5%;
+  margin-left: 50px;
 
   a {
     color: #ffffff;
