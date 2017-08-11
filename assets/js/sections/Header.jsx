@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Title, SubTitle } from '../components/Typography.jsx';
-import { Container } from 'react-grid-system';
+import { Container, Row, Col } from '../components/Grid.jsx';
 
 import heroBackgroundImage from '../../../assets/images/hero-background.png';
 

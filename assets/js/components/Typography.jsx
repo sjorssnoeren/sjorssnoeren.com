@@ -12,6 +12,11 @@ export const SubTitle = styled.h2`
   font-weight: 300;
 `;
 
+export const LargeSectionTitle = styled.h3`
+  font-size: 35px;
+  font-weight: 300;
+`;
+
 export const SectionTitle = styled.h3`
   font-size: 24px;
   font-weight: 600;
@@ -27,7 +32,10 @@ export const Text = styled.p`
   line-height: 1.75;
 `;
 
+export const PaddedText = Text.extend`margin-bottom: 30px`;
+
 export const Link = styled.a`
   color: #0D7BFB;
   text-decoration: none;
+  line-height: 1.75;
 `;
