@@ -49,6 +49,13 @@ const WorkItem = styled.div`
     color: #ffffff;
   }
 
+  h3 a {
+    color: #ffffff;
+    &:after {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
   p {
     color: rgba(255, 255, 255, 0.8);
   }
@@ -62,6 +69,11 @@ const AppStoreButton = styled.a`
   color: rgba(255, 255, 255, 0.0);
   margin-top: 30px;
   user-select: none;
+  transition: 200ms ease-out transform;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const DeviceImage = styled.img`
@@ -90,7 +102,7 @@ const Work = (props) => {
             <Container>
               <Row align="center">
                 <Col width={1/2} key={0} order={index % 2 == 0 ? 0 : 1} style={{ textAlign: textDirection }}>
-                  <LargeSectionTitle>{item.title}</LargeSectionTitle>
+                  <LargeSectionTitle><Link href={item.link}>{item.title}</Link></LargeSectionTitle>
                   <PaddedText>{item.partners.join(' & ')}</PaddedText>
                   <Text>{item.description}</Text>
                   <AppStoreButton href={item.link}>Download on the AppStore</AppStoreButton>

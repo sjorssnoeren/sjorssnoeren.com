@@ -30,7 +30,7 @@ function action($json) {
     sendMail($json);
     return ['success' => false, 'message' => 'Please fill all required fields correctly.'];
   }
-  return ['success' => true, 'message' => 'Succesfully sent your message. I\'ll get back to you shortly'];
+  return ['success' => true, 'message' => 'Succesfully sent your message. I\'ll get back to you shortly.'];
 }
 
 $requestBody = file_get_contents('php://input');

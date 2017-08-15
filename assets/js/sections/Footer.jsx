@@ -26,6 +26,10 @@ const FooterBackground = styled.div`
     float: left;
     line-height: 1.2;
   }
+
+  a {
+    line-height: 1.4;
+  }
 `;
 
 const Footer = (props) => {

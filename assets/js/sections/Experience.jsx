@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Container, Row, Col } from '../components/Grid.jsx';
 
-import { SectionTitle, Text, Link } from '../components/Typography.jsx';
+import { SectionTitle, Text, Link, Strong } from '../components/Typography.jsx';
 import Section from '../components/Section.jsx';
 
 import forzaDigitalLogo from '../../../assets/images/forza-digital.png';
@@ -55,6 +55,20 @@ const ExperienceCard = styled.div`
   a {
     color: #000;
   }
+
+  transition: 200ms ease-out transform, 200ms ease-out background-color, 200ms ease-out box-shadow;
+
+  &:hover {
+    background-color: #ffffff;
+    /* Box-shadow inspired by design.google.com */
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: none;
+  }
 `;
 
 const ExperienceCardNegativeSpace = styled.div`
@@ -72,16 +86,15 @@ const Experience = (props) => {
         <Row wrap={true}>
           {items.map((item) => (
             <Col width={1/2} key={item.title}>
-              <ExperienceCard>
-                <Link href={item.link} rel="nofollow">
+              <Link href={item.link} rel="nofollow">
+                <ExperienceCard>
                   {item.image != null ? (<img src={item.image} alt={item.title} />) : null}
                   <br />
 
-                  {item.title}
-                </Link>
-
-                <Text>{item.description}</Text>
-              </ExperienceCard>
+                  <Text><Strong>{item.title}</Strong></Text>
+                  <Text>{item.description}</Text>
+                </ExperienceCard>
+              </Link>
             </Col>
           ))}
         </Row>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darkestGray, blue } from '../colors.jsx';
 
 export const Title = styled.h1`
   color: #ffffff;
@@ -32,10 +33,31 @@ export const Text = styled.p`
   line-height: 1.75;
 `;
 
+export const Strong = styled.strong`
+  color: ${darkestGray};
+  font-weight: 400;
+`;
+
 export const PaddedText = Text.extend`margin-bottom: 30px`;
 
 export const Link = styled.a`
-  color: #0D7BFB;
+  color: ${blue};
   text-decoration: none;
   line-height: 1.75;
+  position: relative;
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: rgba(12, 123, 251, 0.3);
+    transition: 150ms ease-in-out width;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
 `;
