@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { Title, SubTitle } from '../components/Typography.jsx';
@@ -31,17 +31,62 @@ const HeroText = styled.div`
   margin-bottom: 54px;
 `;
 
-const Header = (props) => {
-  return (
-    <Hero>
-      <HeroOverlay>
+const StickyHeaderBackground = styled.div`
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+`;
+
+
+class StickyHeader extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      progressFactor: 0.0,
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.windowDidScroll.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.windowDidScroll.bind(this));
+  }
+
+  render() {
+    const invertedFactor = 1.0 - this.state.progressFactor;
+
+    return (
+      <StickyHeaderBackground style={{ backgroundColor: `rgba(0, 0, 0, ${this.state.progressFactor})` }}>
         <Container>
-          <Nav links={[
+          <Nav padding={`${(invertedFactor * 30) + 24}px 0`} links={[
             { title: 'About', href: '#about' },
             { title: 'Work', href: '#work' },
             { title: 'Contact', href: '#contact' },
           ]} />
         </Container>
+      </StickyHeaderBackground>
+    );
+  }
+
+  windowDidScroll() {
+    const currentY = window.scrollY;
+    const endY = 350;
+
+    const progressFactor = Math.min(1.0, currentY / endY);
+    this.setState({ progressFactor });
+  }
+}
+
+const Header = (props) => {
+  return (
+    <Hero>
+      <HeroOverlay>
+        <StickyHeader />
 
         <HeroText>
           <Container>

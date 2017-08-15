@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const NavList = styled.ul`
   display: inline-block;
   float: right;
-  padding: 54px 0;
   white-space: nowrap;
 `;
 
@@ -23,7 +22,7 @@ const NavItem = styled.li`
 const Nav = (props) => {
   return (
     <nav>
-      <NavList>
+      <NavList style={{ padding: props.padding || '54px 0' }}>
         {props.links.map((link) => {
           return (<NavItem key={link.title}><a href={link.href}>{link.title}</a></NavItem>);
         })}
