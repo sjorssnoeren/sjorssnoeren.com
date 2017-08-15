@@ -14,5 +14,5 @@ Personal portfolio 2017. Built with React and Webpack. Experimented with Styled 
 
 ### Release
 
-* Compile Webpack with dev mode
+* Compile Webpack with live mode
 * Favicon
