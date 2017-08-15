@@ -22,7 +22,7 @@ function validate($json) {
 }
 
 function sendMail($json) {
-  // TODO: Include SMTP Mailer function
+  mail('sjorsme@gmail.com', 'Contact inquiry from: ' . $json['name'] . ' (' . $json['email'] . ')', $json['message']);
 }
 
 function action($json) {
@@ -30,7 +30,7 @@ function action($json) {
     sendMail($json);
     return ['success' => false, 'message' => 'Please fill all required fields correctly.'];
   }
-  return ['success' => true, 'message' => 'Succesfully sent your message. I\'ll get back to you shortly.'];
+  return ['success' => true, 'message' => 'Succesfully sent your message. I\'ll get back to you shortly'];
 }
 
 $requestBody = file_get_contents('php://input');
