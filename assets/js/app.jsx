@@ -7,6 +7,8 @@ import Header from './sections/Header.jsx';
 import About from './sections/About.jsx';
 import Experience from './sections/Experience.jsx';
 import Work from './sections/Work.jsx';
+import Contact from './sections/Contact.jsx';
+import Footer from './sections/Footer.jsx';
 
 const AppContainer = styled.div`
   -webkit-font-smoothing: antialiased;
@@ -25,6 +27,8 @@ const App = (props) => {
       <About />
       <Experience />
       <Work />
+      <Contact />
+      <Footer />
     </AppContainer>
   );
 };

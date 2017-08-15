@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { Title, SubTitle } from '../components/Typography.jsx';
 import { Container, Row, Col } from '../components/Grid.jsx';
 
+import Nav from '../components/Nav.jsx';
+
 import heroBackgroundImage from '../../../assets/images/hero-background.png';
 
 const Hero = styled.div`
@@ -29,42 +31,16 @@ const HeroText = styled.div`
   margin-bottom: 54px;
 `;
 
-const NavList = styled.ul`
-  display: inline-block;
-  float: right;
-  padding: 54px 0;
-  white-space: nowrap;
-`;
-
-const NavItem = styled.li`
-  display: inline-block;
-  font-size: 20px;
-  margin-left: 50px;
-
-  a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-`;
-
-const Nav = (props) => {
-  return (
-    <nav>
-      <NavList>
-        {props.links.map((link) => {
-          return (<NavItem key={link}><a href="#">{link}</a></NavItem>);
-        })}
-      </NavList>
-    </nav>
-  );
-};
-
 const Header = (props) => {
   return (
     <Hero>
       <HeroOverlay>
         <Container>
-          <Nav links={['About', 'Work', 'Contact']} />
+          <Nav links={[
+            { title: 'About', href: '#about' },
+            { title: 'Work', href: '#work' },
+            { title: 'Contact', href: '#contact' },
+          ]} />
         </Container>
 
         <HeroText>
