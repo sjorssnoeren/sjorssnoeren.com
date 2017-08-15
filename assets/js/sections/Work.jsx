@@ -86,17 +86,17 @@ const Work = (props) => {
         const textDirection = index % 2 == 0 ? 'left' : 'right';
 
         return (
-          <WorkItem style={{backgroundColor: item.backgroundColor}}>
+          <WorkItem key={index} style={{backgroundColor: item.backgroundColor}}>
             <Container>
               <Row align="center">
-                <Col width={1/2} order={index % 2 == 0 ? 0 : 1} style={{'text-align': textDirection}}>
+                <Col width={1/2} key={0} order={index % 2 == 0 ? 0 : 1} style={{ textAlign: textDirection }}>
                   <LargeSectionTitle>{item.title}</LargeSectionTitle>
                   <PaddedText>{item.partners.join(' & ')}</PaddedText>
                   <Text>{item.description}</Text>
                   <AppStoreButton href={item.link}>Download on the AppStore</AppStoreButton>
                 </Col>
 
-                <Col width={1/2}>
+                <Col width={1/2} key={1}>
                   <DeviceImage src={item.image} />
                 </Col>
               </Row>

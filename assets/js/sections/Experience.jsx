@@ -71,7 +71,7 @@ const Experience = (props) => {
 
         <Row wrap={true}>
           {items.map((item) => (
-            <Col width={1/2}>
+            <Col width={1/2} key={item.title}>
               <ExperienceCard>
                 <Link href={item.link} rel="nofollow">
                   {item.image != null ? (<img src={item.image} alt={item.title} />) : null}
