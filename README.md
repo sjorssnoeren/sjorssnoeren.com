@@ -16,6 +16,7 @@ Personal portfolio 2017. Built with React and Webpack. Experimented with Styled 
 * Test contact form on server
 * Favicon
 
-### Improvements
+### Future Improvements
 
 * Contact form loading state
+* More responsive text (bigger on large screens and more adjusted for smaller ones as well)
