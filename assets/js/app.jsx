@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import 'zenscroll';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 

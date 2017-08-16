@@ -4,13 +4,13 @@ Personal portfolio 2017. Built with React and Webpack. Experimented with Styled 
 
 ### TODO
 
-* Internal links with History.js
 * Find a good cover photo
-* Retina Images (also AppStore Buttons)
+* Minimize Images
 * Hi-res Responsiveness (Big Text)
 * Lo-res Responsiveness (Mobile Navigation)
 * PHPMailer/SwiftMailer in Contact API
 * Animations
+* Refine texts
 
 ### Release
 

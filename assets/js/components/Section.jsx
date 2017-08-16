@@ -1,3 +1,3 @@
 import styled from 'styled-components';
 
-export default styled.div`margin-top: 90px;`;
+export default styled.div`padding-top: 90px;`;

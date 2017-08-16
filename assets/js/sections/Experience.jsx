@@ -7,35 +7,59 @@ import { SectionTitle, Text, Link, Strong } from '../components/Typography.jsx';
 import Section from '../components/Section.jsx';
 
 import forzaDigitalLogo from '../../../assets/images/forza-digital.png';
+import forzaDigitalLogoRetina from '../../../assets/images/forza-digital@2x.png';
+
 import ristrettoLogo from '../../../assets/images/ristretto.png';
+import ristrettoLogoRetina from '../../../assets/images/ristretto@2x.png';
+
 import radboudLogo from '../../../assets/images/radboud.png';
+import radboudLogoRetina from '../../../assets/images/radboud@2x.png';
+
 import blendleLogo from '../../../assets/images/blendle.png';
+import blendleLogoRetina from '../../../assets/images/blendle@2x.png';
+
 import appleLogo from '../../../assets/images/apple.png';
+import appleLogoRetina from '../../../assets/images/apple@2x.png';
 
 const items = [{
   title: 'Forza-Digital.com',
   link: 'https://forza-digital.com',
-  image: forzaDigitalLogo,
+  images: {
+    regular: forzaDigitalLogo,
+    retina: forzaDigitalLogoRetina,
+  },
   description: 'At Forza Digital I\'ve been leading the team with a handful developers. I\'ve been there from the beginning and personally streamlined the workflow of creating websites and apps.',
 }, {
   title: 'Ristretto.co',
   link: 'http://ristretto.co',
-  image: ristrettoLogo,
+  images: {
+    regular: ristrettoLogo,
+    retina: ristrettoLogoRetina,
+  },
   description: 'Together with two friends, I co-founded Ristretto. We\'ve created stunning digital products for leading corporates from day one. I\'ve been responsible for the technical side of our products as well as visual direction.',
 }, {
   title: 'RadboudUMC REshape',
   link: 'http://radboudreshapecenter.com',
-  image: radboudLogo,
+  images: {
+    regular: radboudLogo,
+    retina: radboudLogoRetina,
+  },
   description: 'At Radboud I was a part of the innovation group. Within this group we\'ve streamlined the business processes from the hospital.',
 }, {
   title: 'Blendle.com',
   link: 'http://blendle.com',
-  image: blendleLogo,
+  images: {
+    regular: blendleLogo,
+    retina: blendleLogoRetina,
+  },
   description: 'At Blendle I\'ve helped making the app responsive and compatible with the iPad. I\'ve also helped making performance improvements for the trending app.',
 }, {
   title: 'WWDC Scholarship 2014',
   link: 'http://ristretto.co',
-  image: appleLogo,
+  images: {
+    regular: appleLogo,
+    retina: appleLogoRetina,
+  },
   description: 'I\'ve received an Apple WWDC Student Scholarship back in 2014.',
 }, {
   title: 'Freelance',
@@ -85,10 +109,14 @@ const Experience = (props) => {
 
         <Row wrap={true}>
           {items.map((item) => (
-            <Col width={1/2} key={item.title}>
+            <Col width={[1, 1/2]} key={item.title}>
               <Link href={item.link} rel="nofollow">
                 <ExperienceCard>
-                  {item.image != null ? (<img src={item.image} alt={item.title} />) : null}
+                  {item.images != null ? (
+                    <img src={item.images.regular}
+                         srcSet={`${item.images.regular} 1x, ${item.images.retina} 2x`}
+                         alt={item.title} />
+                  ) : null}
                   <br />
 
                   <Text><Strong>{item.title}</Strong></Text>

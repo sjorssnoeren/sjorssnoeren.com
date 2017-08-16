@@ -88,7 +88,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <Section>
+      <Section id="contact">
         <Container>
           <SectionTitle>Let’s get in touch</SectionTitle>
         </Container>
@@ -97,7 +97,7 @@ class Contact extends Component {
           <Container>
             {this.state.responseError != null || this.state.responseMessage != null ? (
               <Row>
-                <Col width={2/3}>
+                <Col width={[1, 1, 2/3]}>
                   <ContactMessage style={{ backgroundColor: this.state.responseError ? red : green }}>
                     <Text>{this.state.responseError != null ? this.state.responseError : this.state.responseMessage}</Text>
                   </ContactMessage>
@@ -106,18 +106,18 @@ class Contact extends Component {
             ) : null}
 
             <Row>
-              <Col width={1/3}>
+              <Col width={[1, 1/2, 1/3]}>
                 <Label>Name</Label>
                 <Input onChange={this.nameDidChange.bind(this)} />
               </Col>
-              <Col width={1/3}>
+              <Col width={[1, 1/2, 1/3]}>
                 <Label>Email</Label>
                 <Input onChange={this.emailDidChange.bind(this)} />
               </Col>
             </Row>
 
             <Row>
-              <Col width={2/3}>
+              <Col width={[1, 1, 2/3]}>
                 <Label>Message</Label>
                 <TextArea rows="6" onChange={this.messageDidChange.bind(this)}></TextArea>
 
