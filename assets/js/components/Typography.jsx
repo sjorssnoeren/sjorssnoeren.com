@@ -5,12 +5,28 @@ export const Title = styled.h1`
   color: #ffffff;
   font-size: 45px;
   font-weight: 300;
+
+  @media screen and (min-width: 64em) {
+    font-size: 56px;
+  }
+
+  @media screen and (max-width: 40em) {
+    font-size: 35px;
+  }
 `;
 
 export const SubTitle = styled.h2`
   color: rgba(255, 255, 255, 0.4);
   font-size: 45px;
   font-weight: 300;
+
+  @media screen and (min-width: 64em) {
+    font-size: 56px;
+  }
+
+  @media screen and (max-width: 40em) {
+    font-size: 35px;
+  }
 `;
 
 export const LargeSectionTitle = styled.h3`
@@ -22,6 +38,10 @@ export const SectionTitle = styled.h3`
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 30px;
+
+  @media screen and (max-width: 40em) {
+    margin-bottom: 10px;
+  }
 `;
 
 export const h4 = styled.h4``;
@@ -31,6 +51,10 @@ export const Text = styled.p`
   color: #AFAFAF;
   font-size: 16px;
   line-height: 1.75;
+
+  @media screen and (max-width: 40em) {
+    font-size: 15px;
+  }
 `;
 
 export const Strong = styled.strong`

@@ -7,7 +7,6 @@ Personal portfolio 2017. Built with React and Webpack. Experimented with Styled 
 * Find a good cover photo
 * Minimize Images
 * Hi-res Responsiveness (Big Text)
-* Lo-res Responsiveness (Mobile Navigation)
 * PHPMailer/SwiftMailer in Contact API
 * Animations
 * Refine texts

@@ -12,7 +12,12 @@ import { Label, Input, TextArea, Button } from '../components/Form.jsx';
 import Section from '../components/Section.jsx';
 
 const ContactForm = styled.form`
-  background-color: #EFEFEF; padding: 90px 0;
+  background-color: #EFEFEF;
+  padding: 90px 0;
+
+  @media screen and (max-width: 40em) {
+    padding: 40px 0;
+  }
 `;
 
 const ContactMessage = styled.div`
@@ -105,7 +110,7 @@ class Contact extends Component {
               </Row>
             ) : null}
 
-            <Row>
+            <Row wrap="wrap">
               <Col width={[1, 1/2, 1/3]}>
                 <Label>Name</Label>
                 <Input onChange={this.nameDidChange.bind(this)} />

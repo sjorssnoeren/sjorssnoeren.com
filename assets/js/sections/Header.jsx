@@ -14,6 +14,10 @@ const Hero = styled.div`
   background-size: cover;
   background-position: center;
   position: relative;
+
+  @media screen and (max-width: 40em) {
+    height: 320px;
+  }
 `;
 
 const HeroOverlay = styled.div`
@@ -29,6 +33,10 @@ const HeroText = styled.div`
   bottom: 0;
   left: 0;
   margin-bottom: 54px;
+
+  @media screen and (max-width: 40em) {
+    margin-bottom: 24px;
+  }
 `;
 
 const StickyHeaderBackground = styled.div`

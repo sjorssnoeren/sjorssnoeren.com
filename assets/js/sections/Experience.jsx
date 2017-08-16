@@ -93,6 +93,12 @@ const ExperienceCard = styled.div`
     box-shadow: none;
     transform: none;
   }
+
+  @media screen and (max-width: 40em) {
+    width: 100%;
+    margin-left: -10px;
+    padding: 20px 10px;
+  }
 `;
 
 const Experience = (props) => {

@@ -80,8 +80,18 @@ const WorkItem = styled.div`
     color: rgba(255, 255, 255, 0.8);
   }
 
-  & > div > div > div {
-    padding: 30px 0;
+  @media screen and (max-width: 1100px) {
+    /* Not really sure why the grid is causing to overflow about 8px */
+    padding: 0 8px;
+  }
+`;
+
+const WorkCol = styled(Col)`
+  padding: 30px 0;
+
+  @media screen and (max-width: 40em) {
+    order: initial;
+    text-align: left !important;
   }
 `;
 
@@ -98,6 +108,10 @@ const AppStoreButton = styled.a`
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url(${appstoreButtonRetina});
+  }
+
+  @media screen and (max-width: 40em) {
+    margin-bottom: -20px;
   }
 
   &:hover {
@@ -125,22 +139,22 @@ const Work = (props) => {
       </Container>
 
       {items.map((item, index) => {
-        const textDirection = index % 2 == 0 ? 'left' : 'right';
+        const textAlign = index % 2 == 0 ? 'left' : 'right';
 
         return (
-          <WorkItem key={index} style={{backgroundColor: item.backgroundColor}}>
+          <WorkItem key={index} style={{ backgroundColor: item.backgroundColor }}>
             <Container>
               <Row align="center" wrap="wrap">
-                <Col width={[1, 1/2]} key={0} order={index % 2 == 0 ? 0 : 1} style={{ textAlign: textDirection }}>
+                <WorkCol width={[1, 1/2]} key="0" order={index % 2 == 0 ? 0 : 1} style={{ textAlign }}>
                   <LargeSectionTitle><Link href={item.link}>{item.title}</Link></LargeSectionTitle>
                   <PaddedText>{item.partners.join(' & ')}</PaddedText>
                   <Text>{item.description}</Text>
                   <AppStoreButton href={item.link}>Download on the AppStore</AppStoreButton>
-                </Col>
+                </WorkCol>
 
-                <Col width={[1, 1/2]} key={1}>
+                <WorkCol width={[1, 1/2]} key="1">
                   <DeviceImage src={item.images.regular} srcSet={`${item.images.regular} 1x, ${item.images.retina} 2x`} />
-                </Col>
+                </WorkCol>
               </Row>
             </Container>
           </WorkItem>

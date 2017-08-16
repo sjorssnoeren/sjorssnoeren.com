@@ -6,6 +6,10 @@ export const Label = styled.label`
   font-size: 16px;
   display: block;
   margin-bottom: 4px;
+
+  @media screen and (max-width: 40em) {
+    font-size: 15px;
+  }
 `;
 
 export const TextArea = styled.textarea`

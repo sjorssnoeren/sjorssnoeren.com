@@ -7,6 +7,10 @@ const NavList = styled.ul`
   display: inline-block;
   float: right;
   white-space: nowrap;
+
+  @media screen and (max-width: 40em) {
+    padding: 22px 0 !important;
+  }
 `;
 
 const NavItem = styled.li`
@@ -14,6 +18,11 @@ const NavItem = styled.li`
   font-size: 20px;
   line-height: 1.2;
   margin-left: 50px;
+
+  @media screen and (max-width: 40em) {
+    font-size: 16px;
+    margin: 0 15px;
+  }
 
   a {
     color: #ffffff;

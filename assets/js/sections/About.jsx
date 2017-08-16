@@ -4,13 +4,15 @@ import styled from 'styled-components';
 import { Container, Row, Col } from '../components/Grid.jsx';
 
 import { SectionTitle, Text, Link } from '../components/Typography.jsx';
-import Section from '../components/Section.jsx';
+import Section, { FirstSectionPaddingTop } from '../components/Section.jsx';
 
 const AboutCol = styled(Col)`margin-bottom: 20px`;
 
 const About = (props) => {
   return (
     <Section id="about">
+      <FirstSectionPaddingTop />
+
       <Container>
         <SectionTitle>About me</SectionTitle>
 
