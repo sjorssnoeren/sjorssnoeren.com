@@ -79,6 +79,10 @@ const WorkItem = styled.div`
   p {
     color: rgba(255, 255, 255, 0.8);
   }
+
+  & > div > div > div {
+    padding: 30px 0;
+  }
 `;
 
 const AppStoreButton = styled.a`
@@ -102,7 +106,7 @@ const AppStoreButton = styled.a`
 `;
 
 const DeviceImage = styled.img`
-  margin: 30px auto;
+  margin: 0 auto;
   display: block;
   max-width: 100%;
 `;
@@ -126,15 +130,15 @@ const Work = (props) => {
         return (
           <WorkItem key={index} style={{backgroundColor: item.backgroundColor}}>
             <Container>
-              <Row align="center">
-                <Col width={1/2} key={0} order={index % 2 == 0 ? 0 : 1} style={{ textAlign: textDirection }}>
+              <Row align="center" wrap="wrap">
+                <Col width={[1, 1/2]} key={0} order={index % 2 == 0 ? 0 : 1} style={{ textAlign: textDirection }}>
                   <LargeSectionTitle><Link href={item.link}>{item.title}</Link></LargeSectionTitle>
                   <PaddedText>{item.partners.join(' & ')}</PaddedText>
                   <Text>{item.description}</Text>
                   <AppStoreButton href={item.link}>Download on the AppStore</AppStoreButton>
                 </Col>
 
-                <Col width={1/2} key={1}>
+                <Col width={[1, 1/2]} key={1}>
                   <DeviceImage src={item.images.regular} srcSet={`${item.images.regular} 1x, ${item.images.retina} 2x`} />
                 </Col>
               </Row>

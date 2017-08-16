@@ -95,12 +95,6 @@ const ExperienceCard = styled.div`
   }
 `;
 
-const ExperienceCardNegativeSpace = styled.div`
-  width: 100%;
-  height: 0;
-  margin-bottom: -20px;
-`;
-
 const Experience = (props) => {
   return (
     <Section>
@@ -126,8 +120,6 @@ const Experience = (props) => {
             </Col>
           ))}
         </Row>
-
-        <ExperienceCardNegativeSpace />
       </Container>
     </Section>
   );
