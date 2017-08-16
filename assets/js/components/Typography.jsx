@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darkestGray, blue } from '../colors.jsx';
+import { darkestGray, blue } from '../colors.js';
 
 export const Title = styled.h1`
   color: #ffffff;

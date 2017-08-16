@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { red, green, white } from '../colors.jsx';
+import { red, green, white } from '../colors.js';
 import 'whatwg-fetch';
 
 import { Container, Row, Col } from '../components/Grid.jsx';

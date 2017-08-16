@@ -16,7 +16,7 @@ const Hero = styled.div`
   position: relative;
 
   @media screen and (max-width: 40em) {
-    height: 320px;
+    height: 350px;
   }
 `;
 
@@ -83,7 +83,7 @@ class StickyHeader extends Component {
 
   windowDidScroll() {
     const currentY = window.scrollY;
-    const endY = 350;
+    const endY = 300;
 
     const progressFactor = Math.min(1.0, currentY / endY);
     this.setState({ progressFactor });

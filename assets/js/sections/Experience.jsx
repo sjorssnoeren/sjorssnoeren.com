@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Equalizer from 'react-equalizer';
+
 import { Container, Row, Col } from '../components/Grid.jsx';
 
 import { SectionTitle, Text, Link, Strong } from '../components/Typography.jsx';
@@ -101,28 +103,30 @@ const ExperienceCard = styled.div`
   }
 `;
 
+const ExperienceCardLink = styled(Link)``;
+
 const Experience = (props) => {
   return (
     <Section>
       <Container>
         <SectionTitle>Experience</SectionTitle>
 
-        <Row wrap={true}>
+        <Row wrap="wrap">
           {items.map((item) => (
-            <Col width={[1, 1/2]} key={item.title}>
-              <Link href={item.link} rel="nofollow">
+            <Col width={[1, 1/2, 1/3]} key={item.title}>
+              <ExperienceCardLink href={item.link} rel="nofollow">
                 <ExperienceCard>
                   {item.images != null ? (
                     <img src={item.images.regular}
-                         srcSet={`${item.images.regular} 1x, ${item.images.retina} 2x`}
-                         alt={item.title} />
+                        srcSet={`${item.images.regular} 1x, ${item.images.retina} 2x`}
+                        alt={item.title} />
                   ) : null}
                   <br />
 
                   <Text><Strong>{item.title}</Strong></Text>
                   <Text>{item.description}</Text>
                 </ExperienceCard>
-              </Link>
+              </ExperienceCardLink>
             </Col>
           ))}
         </Row>

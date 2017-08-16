@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { blue, white, darkestGray } from '../colors.jsx';
+import { blue, white, darkestGray } from '../colors.js';
 
 export const Label = styled.label`
   font-size: 16px;
@@ -23,6 +23,8 @@ export const TextArea = styled.textarea`
   margin-bottom: 20px;
   border: 1px solid transparent;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none;
+  border-radius: 0;
 
   &:focus {
     border-color: ${blue};
@@ -39,6 +41,8 @@ export const Input = styled.input`
   margin-bottom: 20px;
   border: 1px solid transparent;
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+  -webkit-appearance: none;
+  border-radius: 0;
 
   &:focus {
     border-color: ${blue};
@@ -56,6 +60,7 @@ export const Button = styled.input`
   float: right;
   display: block;
   transition: 150ms ease-out background-color;
+  -webkit-appearance: none;
 
   &:hover {
 

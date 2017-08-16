@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { darkestGray } from '../colors.jsx';
+import { darkestGray } from '../colors.js';
 
 import { Container, Row, Col } from '../components/Grid.jsx';
 
