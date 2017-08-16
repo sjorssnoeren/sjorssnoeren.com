@@ -13,6 +13,7 @@ Personal portfolio 2017. Built with React and Webpack. Experimented with Styled 
 
 * Compile Webpack with live mode
 * Minify Images
+* Test Microsoft Edge and older webkit versions
 * Test contact form on server
 * Favicon
 
