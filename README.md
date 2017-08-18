@@ -9,6 +9,7 @@ Personal portfolio 2017. Built with React and Webpack. Experimented with Styled 
 * Test Microsoft Edge and older webkit versions
 * Test contact form on server
 * Favicon
+* Adds robots.txt
 
 ### Future Improvements
 

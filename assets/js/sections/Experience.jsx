@@ -31,7 +31,7 @@ const items = [{
     regular: forzaDigitalLogo,
     retina: forzaDigitalLogoRetina,
   },
-  description: 'At Forza Digital I\'ve been leading the development team. I\'ve been there from the beginning and personally streamlined the workflow of creating websites and apps.',
+  description: 'At Forza Digital I\'ve been leading the development team. I\'ve been there from the start and personally streamlined the workflow of creating websites and apps.',
 }, {
   title: 'Ristretto.co',
   link: 'http://ristretto.co',
@@ -39,7 +39,7 @@ const items = [{
     regular: ristrettoLogo,
     retina: ristrettoLogoRetina,
   },
-  description: 'Together with two friends, I co-founded Ristretto. We\'ve created stunning digital products for leading corporates from day one. I\'ve been responsible for the technical side of our products as well as visual direction.',
+  description: 'Together with two friends, I co-founded Ristretto. We\'ve created digital products for leading corporates. I\'ve been responsible for the technical side of our products as well as visual direction.',
 }, {
   title: 'RadboudUMC REshape',
   link: 'http://radboudreshapecenter.com',
@@ -47,7 +47,7 @@ const items = [{
     regular: radboudLogo,
     retina: radboudLogoRetina,
   },
-  description: 'At Radboud I was a part of the innovation group. Within this group we\'ve streamlined the business processes from the hospital with digital products.',
+  description: 'At Radboud I was a part of the innovation group. We\'ve streamlined the business processes at the hospital with digital products.',
 }, {
   title: 'Blendle.com',
   link: 'http://blendle.com',
@@ -55,7 +55,7 @@ const items = [{
     regular: blendleLogo,
     retina: blendleLogoRetina,
   },
-  description: 'At Blendle I\'ve helped making the app responsive and compatible with the iPad. I\'ve also helped making performance improvements for the Blendle trending app.',
+  description: 'I\'ve helped making the app responsive and compatible with the iPad. I\'ve also helped making performance improvements for the Blendle trending app.',
 }, {
   title: 'WWDC Scholarship 2014',
   link: 'https://developer.apple.com/wwdc',
@@ -67,7 +67,7 @@ const items = [{
 }, {
   title: 'Freelance',
   link: 'http://sjorssnoeren.com',
-  description: 'From a young age, I\'ve been taking freelance projects. I\'ve worked with people from all over the world to help them create websites and apps.',
+  description: 'I\'ve worked with people from all over the world to help them create websites and apps.',
 }];
 
 const ExperienceCard = styled.div`
@@ -104,6 +104,11 @@ const ExperienceCard = styled.div`
   }
 `;
 
+const ExperienceLogoPlaceholder = styled.div`
+  height: 36px;
+  width: 1px;
+`;
+
 const ExperienceCardLink = styled(Link)``;
 
 const Experience = (props) => {
@@ -121,7 +126,7 @@ const Experience = (props) => {
                     <img src={item.images.regular}
                         srcSet={`${item.images.regular} 1x, ${item.images.retina} 2x`}
                         alt={item.title} />
-                  ) : null}
+                  ) : <ExperienceLogoPlaceholder />}
                   <br />
 
                   <Text><Strong>{item.title}</Strong></Text>

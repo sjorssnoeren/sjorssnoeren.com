@@ -30,7 +30,7 @@ const items = [{
   },
   link: 'https://itunes.apple.com/nl/app/springtime/id1043571991?mt=8',
   partners: ['Ristretto'],
-  description: 'Together with FlexiForce we designed and developed a mobile app called SpringTime. FlexiForce is a company which offers standardized hardware parts for overhead doors to small and midsize companies across Europe and North America. Responsible for iOS app.',
+  description: 'Together with FlexiForce we designed and developed a mobile app called SpringTime. FlexiForce is a company which offers standardized hardware parts for overhead doors to small and midsize companies across Europe and North America. I\'ve been responsible for the iPhone app.',
   backgroundColor: '#DE332B',
 }, {
   title: 'WordCrex for iOS',
@@ -40,7 +40,7 @@ const items = [{
   },
   link: 'https://itunes.apple.com/us/app/wordcrex-the-fair-word-game/id1045201023?mt=8',
   partners: ['Forza Digital'],
-  description: 'Together with two dutch tech entrepeneurs we’ve created the next generation word game. With the fair word game principle and more supported languages than any other game. The new set of features really makes an outstanding product. Responsible for iPhone app, iPad app and webservice.',
+  description: 'Together with two dutch tech entrepeneurs we\'ve created the next generation wordgame. The new set of features really makes an outstanding product. I\'ve been responsible for the iPhone app, the iPad app and webservice.',
   backgroundColor: '#262161',
 }, {
   title: 'No\' Kiddin for iPad',
@@ -50,7 +50,7 @@ const items = [{
   },
   link: 'https://itunes.apple.com/nl/app/no-kiddin/id1016421096?mt=8',
   partners: ['Ristretto', 'INTK'],
-  description: 'On behalf of INTK we developed an iPad app for the Van Abbemuseum in Eindhoven. By displaying it’s collection with an app in the waiting room of the hospital Radboudumc Nijmegen, the museum aims to bring its collection beyond the walls. Responsible for iPad app.',
+  description: 'On behalf of INTK we developed an iPad app for the Van Abbemuseum in Eindhoven. By displaying its collection with an app in the waiting room of the hospital Radboudumc Nijmegen, the museum aims to bring its collection beyond its walls. I\'ve been responsible for the iPad app.',
   backgroundColor: '#0C0C0C',
 }, {
   title: 'Biermaster for iOS',
@@ -60,7 +60,7 @@ const items = [{
   },
   link: 'https://itunes.apple.com/nl/app/bier-master/id991020242?mt=8',
   partners: ['Forza Digital', 'Sitesupport'],
-  description: 'One of the largest breweries in the Netherlands (ABInBev) invented an app to teach bartenders new kinds of beer and help them appreciate it’s taste. It’s possible to take tests to make sure you understand the theory behind the beers. Responsible for the 2nd version of the iOS app.',
+  description: 'One of the largest breweries in the Netherlands (ABInBev) invented an app to teach bartenders new kinds of beer and help them appreciate its taste. It\'s possible to take tests to make sure you understand the theory behind the beers. I\'ve been responsible for the 2nd version of the iPhone app.',
   backgroundColor: '#FE6647',
 }];
 
@@ -129,11 +129,11 @@ const Work = (props) => {
   return (
     <Section id="work">
       <Container>
-        <SectionTitle>Highlighted work</SectionTitle>
+        <SectionTitle>Featured work</SectionTitle>
 
         <Row>
           <Col width={[1, 1/2]}>
-            <PaddedText>The products I’ve developed reached thousands of people. Underneath is a selection of the ones I’m most proud of.</PaddedText>
+            <PaddedText>The products I've developed reached thousands of people. Underneath is a selection of the ones I'm most proud of.</PaddedText>
           </Col>
         </Row>
       </Container>
