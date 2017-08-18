@@ -6,25 +6,19 @@ import { Container, Row, Col } from '../components/Grid.jsx';
 
 import Nav from '../components/Nav.jsx';
 
-import heroBackgroundImage from '../../../assets/images/hero-background.png';
+import sjorsImage from '../../../assets/images/sjors.png';
 
 const Hero = styled.div`
   height: 568px;
-  background-image: url(${heroBackgroundImage});
-  background-size: cover;
-  background-position: center;
+  background-image: url(${sjorsImage});
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-color: #000;
   position: relative;
 
   @media screen and (max-width: 40em) {
     height: 350px;
   }
-`;
-
-const HeroOverlay = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(0, 15, 47, 0.75);
 `;
 
 const HeroText = styled.div`
@@ -93,16 +87,14 @@ class StickyHeader extends Component {
 const Header = (props) => {
   return (
     <Hero>
-      <HeroOverlay>
-        <StickyHeader />
+      <StickyHeader />
 
-        <HeroText>
-          <Container>
-            <Title>Sjors Snoeren</Title>
-            <SubTitle>Software Engineer</SubTitle>
-          </Container>
-        </HeroText>
-      </HeroOverlay>
+      <HeroText>
+        <Container>
+          <Title>Sjors Snoeren</Title>
+          <SubTitle>Software Engineer</SubTitle>
+        </Container>
+      </HeroText>
     </Hero>
   );
 };
