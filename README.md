@@ -4,7 +4,6 @@ Personal portfolio 2017. Built with React and Webpack. Experimented with Styled 
 
 ### TODO
 
-* Find a good cover photo
 * Refine texts
 * Hi-res Responsiveness (Big Text)
 * Animations
