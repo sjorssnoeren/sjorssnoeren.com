@@ -2,12 +2,6 @@
 
 Personal portfolio 2017. Built with React and Webpack. Experimented with Styled Components as well. Far from done, so expect progress soon.
 
-### TODO
-
-* Refine texts
-* Hi-res Responsiveness (Big Text)
-* Animations
-
 ### Release
 
 * Compile Webpack with live mode
@@ -19,4 +13,5 @@ Personal portfolio 2017. Built with React and Webpack. Experimented with Styled 
 ### Future Improvements
 
 * Contact form loading state
+* Animations
 * More responsive text (bigger on large screens and more adjusted for smaller ones as well)
