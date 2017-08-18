@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Equalizer from 'react-equalizer';
+import HeightMatchingGroup from 'react-height-matching-group'
 
 import { Container, Row, Col } from '../components/Grid.jsx';
 
@@ -30,7 +31,7 @@ const items = [{
     regular: forzaDigitalLogo,
     retina: forzaDigitalLogoRetina,
   },
-  description: 'At Forza Digital I\'ve been leading the team with a handful developers. I\'ve been there from the beginning and personally streamlined the workflow of creating websites and apps.',
+  description: 'At Forza Digital I\'ve been leading the development team. I\'ve been there from the beginning and personally streamlined the workflow of creating websites and apps.',
 }, {
   title: 'Ristretto.co',
   link: 'http://ristretto.co',
@@ -46,7 +47,7 @@ const items = [{
     regular: radboudLogo,
     retina: radboudLogoRetina,
   },
-  description: 'At Radboud I was a part of the innovation group. Within this group we\'ve streamlined the business processes from the hospital.',
+  description: 'At Radboud I was a part of the innovation group. Within this group we\'ve streamlined the business processes from the hospital with digital products.',
 }, {
   title: 'Blendle.com',
   link: 'http://blendle.com',
@@ -54,10 +55,10 @@ const items = [{
     regular: blendleLogo,
     retina: blendleLogoRetina,
   },
-  description: 'At Blendle I\'ve helped making the app responsive and compatible with the iPad. I\'ve also helped making performance improvements for the trending app.',
+  description: 'At Blendle I\'ve helped making the app responsive and compatible with the iPad. I\'ve also helped making performance improvements for the Blendle trending app.',
 }, {
   title: 'WWDC Scholarship 2014',
-  link: 'http://ristretto.co',
+  link: 'https://developer.apple.com/wwdc',
   images: {
     regular: appleLogo,
     retina: appleLogoRetina,
@@ -66,7 +67,7 @@ const items = [{
 }, {
   title: 'Freelance',
   link: 'http://sjorssnoeren.com',
-  description: 'As from a young age I\'ve been taking freelance projects as well. I\'ve worked with people from all over the world to help them create websites and apps.',
+  description: 'From a young age, I\'ve been taking freelance projects. I\'ve worked with people from all over the world to help them create websites and apps.',
 }];
 
 const ExperienceCard = styled.div`
@@ -111,11 +112,11 @@ const Experience = (props) => {
       <Container>
         <SectionTitle>Experience</SectionTitle>
 
-        <Row wrap="wrap">
+        <Row wrap="wrap" align="flex-start">
           {items.map((item) => (
             <Col width={[1, 1/2, 1/3]} key={item.title}>
               <ExperienceCardLink href={item.link} rel="nofollow">
-                <ExperienceCard>
+                <ExperienceCard className="match-height">
                   {item.images != null ? (
                     <img src={item.images.regular}
                         srcSet={`${item.images.regular} 1x, ${item.images.retina} 2x`}
