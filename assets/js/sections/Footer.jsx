@@ -52,7 +52,6 @@ const Footer = (props) => {
       <Container>
         <Text>Source available on <Link href="https://github.com/sjorssnoeren/sjorssnoeren.com">Github</Link></Text>
         <Nav links={[
-          { title: 'Twitter', href: 'https://twitter.com/sjorssnoeren' },
           { title: 'Github', href: 'https://github.com/sjorssnoeren' },
           { title: 'Dribbble', href: 'https://dribbble.com/sjorssnoeren' },
         ]} />
